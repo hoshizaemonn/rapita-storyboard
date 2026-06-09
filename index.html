@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鍼灸院 RAPITA AI動画 モックアップv1 構成案＋台本｜株式会社ランバード</title>
+<style>
+  :root {
+    --primary: #2c3e6e;
+    --primary-light: #4a5a8a;
+    --accent: #b03c3c;
+    --warm: #f5ede0;
+    --cream: #fcfaf4;
+    --text: #2a2a2a;
+    --muted: #6a6a6a;
+    --border: #e6dfd0;
+    --bg: #faf7f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+  }
+  .hero {
+    background: linear-gradient(135deg, #2c3e6e 0%, #4a5a8a 60%, #c9a96e 100%);
+    color: #fff;
+    padding: 64px 24px 100px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 32px; margin-bottom: 10px; letter-spacing: 0.04em; }
+  .hero .sub { font-size: 15px; opacity: 0.95; }
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(8px);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 18px;
+  }
+  .container {
+    max-width: 1080px;
+    margin: -50px auto 0;
+    padding: 0 24px 80px;
+    position: relative;
+    z-index: 2;
+  }
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 8px 28px rgba(40, 50, 80, 0.08);
+    margin-bottom: 32px;
+  }
+  .card h2 {
+    color: var(--primary);
+    font-size: 22px;
+    border-left: 5px solid var(--accent);
+    padding-left: 14px;
+    margin-bottom: 20px;
+  }
+  .card h3 { font-size: 17px; color: var(--primary); margin: 18px 0 10px; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+  }
+  .meta-grid div {
+    background: var(--warm);
+    padding: 12px 16px;
+    border-radius: 10px;
+    border-left: 3px solid var(--accent);
+  }
+  .meta-grid .k { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+  .meta-grid .v { font-size: 14px; font-weight: 700; color: var(--primary); }
+
+  .video-wrap {
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  }
+  .video-wrap video { width: 100%; display: block; }
+
+  .scene-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 16px;
+  }
+  .scene {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    background: var(--cream);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 640px) {
+    .scene { grid-template-columns: 1fr; }
+  }
+  .scene img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  .scene .body { display: flex; flex-direction: column; gap: 8px; }
+  .scene .hdr { display: flex; align-items: baseline; gap: 12px; }
+  .scene .num {
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .scene .sec { color: var(--muted); font-size: 12px; }
+  .scene .telop {
+    background: #fff;
+    padding: 8px 12px;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .scene .nare {
+    color: var(--text);
+    background: var(--warm);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .scene .nare::before { content: "🎙️ "; margin-right: 4px; }
+  .scene .desc { color: var(--muted); font-size: 13px; }
+
+  .check-list { list-style: none; padding: 0; }
+  .check-list li {
+    padding: 10px 14px;
+    background: var(--warm);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border-left: 3px solid #4caf50;
+  }
+  .check-list li::before { content: "✅ "; margin-right: 6px; }
+
+  .pending-list { list-style: none; padding: 0; }
+  .pending-list li {
+    padding: 10px 14px;
+    background: #fff4e0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border-left: 3px solid #f0a040;
+  }
+  .pending-list li::before { content: "⚠️ "; margin-right: 6px; }
+
+  .nara-pill {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 30px 20px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="badge">RUNBIRD AI動画 モックアップ v1</div>
+  <h1 style="margin-top:14px;">鍼灸院 RAPITA</h1>
+  <p class="sub">構成案＋台本＋モックアップ動画（45秒・新海誠アニメ風）</p>
+  <p class="sub" style="margin-top:6px;font-size:13px;opacity:0.85;">2026-06-09｜株式会社ランバード</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>案件サマリ</h2>
+    <div class="meta-grid">
+      <div><div class="k">屋号</div><div class="v">鍼灸院 RAPITA</div></div>
+      <div><div class="k">エリア</div><div class="v">奈良・学園前</div></div>
+      <div><div class="k">代表</div><div class="v">浜小路 啓子 様</div></div>
+      <div><div class="k">尺</div><div class="v">45秒（11シーン）</div></div>
+      <div><div class="k">スタイル</div><div class="v">新海誠風アニメ／白衣アニメ調</div></div>
+      <div><div class="k">公開予定</div><div class="v">8月</div></div>
+      <div><div class="k">主役（お客様）</div><div class="v">50代女性 介護職</div></div>
+      <div><div class="k">CTA遷移先</div><div class="v">lit.link/RAPITA</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>モックアップ動画（無音版・テロップ焼き込み）</h2>
+    <div class="video-wrap">
+      <video src="mockup_v1.mp4" controls preload="metadata" playsinline></video>
+    </div>
+    <p style="color:var(--muted); font-size:13px;">
+      ※ナレーション・BGMは仮置きのため、現バージョンは無音です。本仕上げで「落ち着いた女性ナレ＋癒し系BGM」を追加予定。<br>
+      ※テロップ・住所・TEL・QR遷移先URLは動画内に焼き込み済み。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>クライアントご要望（2026-06-09 LINE）の反映状況</h2>
+    <ul class="check-list">
+      <li>「隠れ家」表現は<strong>画・テロップ・ナレ台本のすべてで使用していません</strong>（「閑静な住宅街の中にある」で統一）</li>
+      <li>「<strong>奈良・学園前</strong>」のエリア表記をシーン3テロップ＋エンドカードで<strong>2回露出</strong><span class="nara-pill">必須要望</span></li>
+      <li>公開時期を<strong>7月前半→8月予定</strong>に変更し制作スケジュール調整済み</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>構成案＋台本（PASONA構造）</h2>
+    <p style="color:var(--muted); margin-bottom:6px;">
+      前半（S1〜S3・寒色トーン）で「朝の腰／介護現場の膝・肩」の<strong>悩み共感</strong>→ S4以降（暖色トーン）で<strong>RAPITAの解決</strong>→ S9以降「翌朝が軽い／仕事もサクサク」の<strong>After</strong>を描く流れ。
+    </p>
+    <div class="scene-grid">
+
+      <div class="scene">
+        <img src="images/01_S01_morning_back_pain.jpg" alt="S01">
+        <div class="body">
+          <div class="hdr"><span class="num">S01</span><span class="sec">0〜3秒</span></div>
+          <div class="telop">朝の一歩目、腰が重い</div>
+          <div class="nare">朝の一歩目、腰が、重い。</div>
+          <div class="desc">寝室・ベッド脇。50代女性が腰に手を当てる。寒色トーンで「だるさ」の入口。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/02_S02_caregiver_knee.jpg" alt="S02">
+        <div class="body">
+          <div class="hdr"><span class="num">S02</span><span class="sec">3〜7秒</span></div>
+          <div class="telop">膝が痛い／肩がこる</div>
+          <div class="nare">立ち仕事の膝、ずっとこわばる肩。</div>
+          <div class="desc">介護施設の廊下。利用者の車椅子を支えながら膝に手。ターゲット直撃の悩みカット。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/03_S03_smartphone_search.jpg" alt="S03">
+        <div class="body">
+          <div class="hdr"><span class="num">S03</span><span class="sec">7〜10秒</span></div>
+          <div class="telop">奈良・学園前で見つけた <span class="nara-pill">エリア露出①</span></div>
+          <div class="nare">がまんし続けて、いいわけない。</div>
+          <div class="desc">バス停でスマホ検索。「奈良・学園前」エリア表記をテロップで1回目の露出。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/04_S04_exterior.jpg" alt="S04">
+        <div class="body">
+          <div class="hdr"><span class="num">S04</span><span class="sec">10〜14秒</span></div>
+          <div class="telop">鍼灸院 RAPITA</div>
+          <div class="nare">閑静な住宅街の中に、その治療室はあります。</div>
+          <div class="desc">いただいたRAPITA外観写真（レンガ塀・緑・表札）をアニメ調で再構成。明るく開かれた印象に。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/05_S05_welcome_in_room.jpg" alt="S05">
+        <div class="body">
+          <div class="hdr"><span class="num">S05</span><span class="sec">14〜18秒</span></div>
+          <div class="telop">薬剤師 × 鍼灸師</div>
+          <div class="nare">迎えるのは、薬剤師の資格をもつ鍼灸師。</div>
+          <div class="desc">いただいた代表のアニメ風イラスト＋治療室写真を踏襲。白衣に「RAPITA」ロゴ。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/06_S06_moxa_needle.jpg" alt="S06">
+        <div class="body">
+          <div class="hdr"><span class="num">S06</span><span class="sec">18〜23秒</span></div>
+          <div class="telop">お一人 約60分／完全予約制</div>
+          <div class="nare">東洋医学と、波動医学。お一人にじっくり、1時間。</div>
+          <div class="desc">いただいた灸頭鍼の写真をベースに、屋内のあたたかな光で再描画。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/07_S07_cupping.jpg" alt="S07">
+        <div class="body">
+          <div class="hdr"><span class="num">S07</span><span class="sec">23〜27秒</span></div>
+          <div class="telop">吸い玉（カッピング）</div>
+          <div class="nare">吸い玉で、深くにアプローチ。</div>
+          <div class="desc">いただいた吸い玉の写真の構図・色味を踏襲。先生の手のひらを添える。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/08_S08_metatron.jpg" alt="S08">
+        <div class="body">
+          <div class="hdr"><span class="num">S08</span><span class="sec">27〜30秒</span></div>
+          <div class="telop">メタトロン（バイオレゾナンス）</div>
+          <div class="nare">気になる方には、メタトロンも。</div>
+          <div class="desc">サブ訴求。穏やかに目を閉じる主役＋やわらかな光のセンサー表現。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/09_S09_morning_curtain.jpg" alt="S09">
+        <div class="body">
+          <div class="hdr"><span class="num">S09</span><span class="sec">30〜35秒</span></div>
+          <div class="telop">朝が、軽い。</div>
+          <div class="nare">朝が、軽い。</div>
+          <div class="desc">翌朝の寝室・カーテンを開ける主役。<strong>S01の寒色 → 暖色への色味転換</strong>でBefore→Afterを強調。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/10_S10_caregiver_smile.jpg" alt="S10">
+        <div class="body">
+          <div class="hdr"><span class="num">S10</span><span class="sec">35〜40秒</span></div>
+          <div class="telop">また、自分らしく動ける日々へ</div>
+          <div class="nare">仕事も、私も、サクサクと。</div>
+          <div class="desc">介護現場で笑顔。足取り軽やかに歩く未来像で締め。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/11_S11_endcard.jpg" alt="S11 ENDCARD">
+        <div class="body">
+          <div class="hdr"><span class="num">S11</span><span class="sec">40〜45秒</span></div>
+          <div class="telop">ENDCARD（屋号・連絡先・QR遷移先）<span class="nara-pill">エリア露出②</span></div>
+          <div class="nare" style="background:#fff;border:1px solid var(--border);">無音 or BGMフェード</div>
+          <div class="desc">
+            <strong>鍼灸院 RAPITA</strong>／奈良・学園前 ／ 完全予約制／<br>
+            〒 奈良県奈良市東登美ヶ丘1-11-10／TEL 090-3867-1325／▶ lit.link/RAPITA<br>
+            ※QRコードは本仕上げ時に右側パネル内に追加予定。
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>仮置き項目（モック提示時にご確認いただきたい点）</h2>
+    <ul class="pending-list">
+      <li><strong>BGM</strong>：落ち着いた癒し系（和×現代の優しいピアノ＋ストリングス）で仮置き</li>
+      <li><strong>ナレーション</strong>：女性ナレ（落ち着いたトーン・ゆったり）で仮置き／声質サンプルは別途共有可</li>
+      <li><strong>尺</strong>：45秒で仮置き／30秒や60秒もご希望あれば調整可</li>
+      <li><strong>代表（先生）の動画内出演</strong>：受領イラスト準拠の「顔出しOK・アニメ調」で仮置き／「手元のみ／出演なし」もご希望あれば調整可</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>素材ご準備のお願い（任意・仕上げ用の差し替え）</h2>
+    <p style="color:var(--muted);">今回はHP・受領写真5点とAIで全カット作成しているため<strong>素材なしでもこのまま納品可能</strong>です。より実物に寄せたい場合のみ下記をいただければ該当カットを差し替えます。</p>
+    <ul style="list-style:none; padding:0; margin-top:12px;">
+      <li>・治療室の追加カット（別アングル）</li>
+      <li>・施術中の手元アップ（鍼／吸い玉）</li>
+      <li>・代表ご本人のお写真（顔出しを実写ベースに寄せたい場合）</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  株式会社ランバード｜<a href="https://lit.link/RAPITA" style="color:var(--primary);">lit.link/RAPITA</a><br>
+  本ページは制作中のモックアップ確認用です。修正対応は原則1回までとさせていただいておりますので、まとめてご指示ください。
+</footer>
+</body>
+</html>
