@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>鍼灸院 RAPITA AI動画 モックアップv1 構成案＋台本｜株式会社ランバード</title>
+<title>鍼灸院 RAPITA AI動画 モックアップv3｜株式会社ランバード</title>
 <style>
   :root {
     --primary: #2c3e6e;
@@ -111,13 +111,21 @@
     display: block;
   }
   .scene .body { display: flex; flex-direction: column; gap: 8px; }
-  .scene .hdr { display: flex; align-items: baseline; gap: 12px; }
+  .scene .hdr { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .scene .num {
     background: var(--primary);
     color: #fff;
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 13px;
+    font-weight: 700;
+  }
+  .scene .role {
+    background: var(--accent);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
     font-weight: 700;
   }
   .scene .sec { color: var(--muted); font-size: 12px; }
@@ -169,6 +177,19 @@
     margin-left: 6px;
   }
 
+  .flow-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  .flow-table th, .flow-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+  .flow-table th { background: var(--warm); color: var(--primary); }
+
   footer {
     text-align: center;
     color: var(--muted);
@@ -179,9 +200,9 @@
 </head>
 <body>
 <div class="hero">
-  <div class="badge">RUNBIRD AI動画 モックアップ v2（修正版）</div>
+  <div class="badge">RUNBIRD AI動画 モックアップ v3（仲野メソッド準拠＋画風統一）</div>
   <h1 style="margin-top:14px;">鍼灸院 RAPITA</h1>
-  <p class="sub">構成案＋台本＋モックアップ動画（45秒・新海誠アニメ風）</p>
+  <p class="sub">構成案＋台本＋モックアップ動画（45秒・受領イラスト準拠の白衣アニメ調）</p>
   <p class="sub" style="margin-top:6px;font-size:13px;opacity:0.85;">2026-06-09｜株式会社ランバード</p>
 </div>
 
@@ -193,8 +214,8 @@
       <div><div class="k">屋号</div><div class="v">鍼灸院 RAPITA</div></div>
       <div><div class="k">エリア</div><div class="v">奈良・学園前</div></div>
       <div><div class="k">代表</div><div class="v">浜小路 啓子 様</div></div>
-      <div><div class="k">尺</div><div class="v">45秒（11シーン）</div></div>
-      <div><div class="k">スタイル</div><div class="v">新海誠風アニメ／白衣アニメ調</div></div>
+      <div><div class="k">尺</div><div class="v">45秒（13シーン）</div></div>
+      <div><div class="k">画風</div><div class="v">受領イラスト準拠の白衣アニメ調</div></div>
       <div><div class="k">公開予定</div><div class="v">8月</div></div>
       <div><div class="k">主役（お客様）</div><div class="v">50代女性 介護職</div></div>
       <div><div class="k">CTA遷移先</div><div class="v">lit.link/RAPITA</div></div>
@@ -204,151 +225,188 @@
   <div class="card">
     <h2>モックアップ動画（無音版・テロップ焼き込み）</h2>
     <div class="video-wrap">
-      <video src="mockup_v2.mp4" controls preload="metadata" playsinline></video>
+      <video src="mockup_v3.mp4" controls preload="metadata" playsinline></video>
     </div>
     <p style="color:var(--muted); font-size:13px;">
       ※ナレーション・BGMは仮置きのため、現バージョンは無音です。本仕上げで「落ち着いた女性ナレ＋癒し系BGM」を追加予定。<br>
-      ※テロップ・住所・TEL・QR遷移先URLは動画内に焼き込み済み。
+      ※テロップ・QR遷移先URLは動画内に焼き込み済み。
     </p>
+  </div>
+
+  <div class="card">
+    <h2>構成の流れ（仲野メソッド準拠）</h2>
+    <p style="color:var(--muted);">
+      「HOOK → Problem → <strong>認知 → 行動</strong> → 来店 → 信頼 → Solution → Benefit → CTA」の流れ。<br>
+      <strong>v3で「夜の自宅 → いきなり外観」の繋がりの違和感を解消</strong>するため、★S04「スマホで見つける（認知）」と★S05「予約タップ（行動）」を新規追加。<br>
+      鍼灸院を「知って→予約して→来店する」までの広告としての流れを完結させています。
+    </p>
+    <table class="flow-table">
+      <thead><tr><th>区分</th><th>シーン</th><th>秒</th></tr></thead>
+      <tbody>
+        <tr><td>HOOK</td><td>S01 朝の腰痛</td><td>0-3</td></tr>
+        <tr><td>Problem</td><td>S02 介護で膝・肩／S03 もう限界</td><td>3-10</td></tr>
+        <tr><td><strong style="color:var(--accent);">認知（新規）</strong></td><td><strong>S04 スマホで見つける</strong></td><td>10-13</td></tr>
+        <tr><td><strong style="color:var(--accent);">行動（新規）</strong></td><td><strong>S05 予約タップ</strong></td><td>13-15</td></tr>
+        <tr><td>来店</td><td>S06 RAPITA外観</td><td>15-19</td></tr>
+        <tr><td>信頼</td><td>S07 治療室で迎える先生</td><td>19-22</td></tr>
+        <tr><td>Solution</td><td>S08 灸頭鍼／S09 吸い玉／S10 メタトロン</td><td>22-34</td></tr>
+        <tr><td>Benefit</td><td>S11 朝が軽い／S12 笑顔の介護</td><td>34-41</td></tr>
+        <tr><td>CTA</td><td>S13 エンドカード</td><td>41-45</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="card">
     <h2>クライアントご要望の反映状況</h2>
-    <h3>2026-06-09 朝LINE（事前要望）</h3>
+    <h3>ヒアリングシート＋2026-06-09 LINE</h3>
     <ul class="check-list">
-      <li>「隠れ家」表現は<strong>画・テロップ・ナレ台本のすべてで使用していません</strong>（「閑静な住宅街の中にある」で統一）</li>
-      <li>「<strong>奈良・学園前</strong>」のエリア表記をS04テロップ＋エンドカードで<strong>2回露出</strong><span class="nara-pill">必須要望</span></li>
-      <li>公開時期を<strong>7月前半→8月予定</strong>に変更し制作スケジュール調整済み</li>
+      <li>動画スタイル：<strong>添付写真の白衣アニメ調</strong>（全シーン受領イラスト準拠で統一）</li>
+      <li>「隠れ家」表現は<strong>画・テロップ・ナレ台本のすべてで使用していません</strong>（「閑静な住宅街の中に」で統一）</li>
+      <li>「<strong>奈良・学園前</strong>」のエリア表記をS06テロップ＋S13エンドカードで<strong>2回露出</strong><span class="nara-pill">必須要望</span></li>
+      <li>主役：50代女性介護職／膝・腰・肩の悩み／吉瀬美智子風（INDEPENDENT FACEで生成）</li>
+      <li>メイン：鍼灸（S08灸頭鍼＋S09吸い玉）／サブ：メタトロン（S10）</li>
+      <li>CTA：QRコード→lit.link/RAPITA（S13エンドカードで実装）</li>
+      <li>公開時期：<strong>7月前半→8月予定</strong>に変更</li>
     </ul>
-    <h3 style="margin-top:20px;">v1→v2 修正反映（本日FB）</h3>
+    <h3 style="margin-top:20px;">v2→v3 修正反映（本日FB）</h3>
     <ul class="check-list">
-      <li>S02 介護シーン：もっと痛そうな表情に修正（顔をしかめる・膝に痛そうな手）</li>
-      <li>S03 バス停スマホ検索：違和感のため<strong>夜の自宅で疲れた表情</strong>に差し替え</li>
-      <li>S07 吸い玉：物だけ→<strong>主役女性の背中に複数の吸い玉を貼った施術中</strong>に変更</li>
-      <li>S08 メタトロン：抽象表現→<strong>機器寄せ（PC画面に波形・人体図）</strong>に変更</li>
-      <li>S09 朝が軽い：<strong>S01と同じ寝室</strong>に統一しBefore→After強化</li>
-      <li>S10 笑顔の介護：<strong>杖を削除</strong>＋両手フリー＋背景の高齢者を笑顔の車椅子に</li>
-      <li>S11 エンドカード：<strong>ヒアリングシートのCTA仕様に統一</strong>（QR + lit.link/RAPITA 中心、住所・TEL・営業時間表記は削除）</li>
+      <li><strong>流れ修正</strong>：「夜の自宅→いきなり外観」の違和感を解消。S04 認知 + S05 行動 を新規挿入し広告として完結</li>
+      <li><strong>画風統一</strong>：全13シーンを受領イラスト準拠の柔らかな白衣アニメ調に統一</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>構成案＋台本（PASONA構造）</h2>
-    <p style="color:var(--muted); margin-bottom:6px;">
-      前半（S1〜S3・寒色トーン）で「朝の腰／介護現場の膝・肩」の<strong>悩み共感</strong>→ S4以降（暖色トーン）で<strong>RAPITAの解決</strong>→ S9以降「翌朝が軽い／仕事もサクサク」の<strong>After</strong>を描く流れ。
-    </p>
+    <h2>構成案＋台本（全13シーン）</h2>
     <div class="scene-grid">
 
       <div class="scene">
         <img src="images/01_S01_morning_back_pain.jpg" alt="S01">
         <div class="body">
-          <div class="hdr"><span class="num">S01</span><span class="sec">0〜3秒</span></div>
+          <div class="hdr"><span class="num">S01</span><span class="role">HOOK</span><span class="sec">0〜3秒</span></div>
           <div class="telop">朝の一歩目、腰が重い</div>
           <div class="nare">朝の一歩目、腰が、重い。</div>
-          <div class="desc">寝室・ベッド脇。50代女性が腰に手を当てる。寒色トーンで「だるさ」の入口。</div>
+          <div class="desc">寝室・ベッド脇。50代女性が腰に手を当てる。冒頭2秒で共感即獲得。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/02_S02_caregiver_knee.jpg" alt="S02">
+        <img src="images/02_S02_caregiver_knee_pain.jpg" alt="S02">
         <div class="body">
-          <div class="hdr"><span class="num">S02</span><span class="sec">3〜7秒</span></div>
+          <div class="hdr"><span class="num">S02</span><span class="role">Problem</span><span class="sec">3〜7秒</span></div>
           <div class="telop">膝が痛い／肩がこる</div>
           <div class="nare">立ち仕事の膝、ずっとこわばる肩。</div>
-          <div class="desc">介護施設で利用者の車椅子を支えながら、膝に手を当て<strong>顔をしかめる痛みの表情</strong>。ターゲット直撃の悩みカット。<br><small style="color:#999;">（v2修正：「痛そうな感じ」のFB反映）</small></div>
+          <div class="desc">介護現場で膝に手を当て痛そうな表情。50代女性介護職に直撃。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/03_S03_smartphone_search.jpg" alt="S03">
+        <img src="images/03_S03_evening_doubt.jpg" alt="S03">
         <div class="body">
-          <div class="hdr"><span class="num">S03</span><span class="sec">7〜10秒</span></div>
-          <div class="telop">もう、限界かもしれない</div>
-          <div class="nare">がまんし続けて、いいわけない。</div>
-          <div class="desc">夜の自宅・リビング。主役がソファで首肩を揉みながら深い溜息。「もう、限界」の情緒を最大化してS04 RAPITA訪問へつなぐ。<br><small style="color:#999;">（v2修正：バス停スマホ検索→夜の自宅に差し替え）</small></div>
+          <div class="hdr"><span class="num">S03</span><span class="role">Problem ピーク</span><span class="sec">7〜10秒</span></div>
+          <div class="telop">このまま、続けるの？</div>
+          <div class="nare">がまんし続けて、いいのかな。</div>
+          <div class="desc">夜の自宅・首肩を揉む。悩みの極み。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/04_S04_exterior.jpg" alt="S04">
+        <img src="images/04_S04_discovery_phone.jpg" alt="S04">
         <div class="body">
-          <div class="hdr"><span class="num">S04</span><span class="sec">10〜14秒</span></div>
+          <div class="hdr"><span class="num">S04</span><span class="role">★認知（新規）</span><span class="sec">10〜13秒</span></div>
+          <div class="telop">そんな時、見つけた。</div>
+          <div class="nare">そんな時、見つけた。奈良・学園前の、薬剤師の鍼灸院。</div>
+          <div class="desc"><strong>スマホで偶然見つけて「こんなのあるんだ」</strong>と認知する瞬間。広告としての架け橋カット。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/05_S05_booking_tap.jpg" alt="S05">
+        <div class="body">
+          <div class="hdr"><span class="num">S05</span><span class="role">★行動（新規）</span><span class="sec">13〜15秒</span></div>
+          <div class="telop">予約してみよう。</div>
+          <div class="nare" style="background:#fff;border:1px solid var(--border);">（効果音のみ・タップ音）</div>
+          <div class="desc"><strong>予約タップ＋確認チェックマーク</strong>。決断の瞬間。問題→解決への意志を可視化。</div>
+        </div>
+      </div>
+
+      <div class="scene">
+        <img src="images/06_S06_exterior.jpg" alt="S06">
+        <div class="body">
+          <div class="hdr"><span class="num">S06</span><span class="role">来店</span><span class="sec">15〜19秒</span></div>
           <div class="telop">奈良・学園前　鍼灸院 RAPITA <span class="nara-pill">エリア露出①</span></div>
           <div class="nare">閑静な住宅街の中に、その治療室はあります。</div>
-          <div class="desc">いただいたRAPITA外観写真（レンガ塀・緑・表札）をアニメ調で再構成。テロップに「奈良・学園前」を入れエリア露出1回目。</div>
+          <div class="desc">いただいたRAPITA外観写真をピクチャーブック調で再構成。エリア露出1回目。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/05_S05_welcome_in_room.jpg" alt="S05">
+        <img src="images/07_S07_welcome_in_room.jpg" alt="S07">
         <div class="body">
-          <div class="hdr"><span class="num">S05</span><span class="sec">14〜18秒</span></div>
+          <div class="hdr"><span class="num">S07</span><span class="role">信頼</span><span class="sec">19〜22秒</span></div>
           <div class="telop">薬剤師 × 鍼灸師</div>
           <div class="nare">迎えるのは、薬剤師の資格をもつ鍼灸師。</div>
-          <div class="desc">いただいた代表のアニメ風イラスト＋治療室写真を踏襲。白衣に「RAPITA」ロゴ。</div>
+          <div class="desc">受領アニメ風イラストの先生＋治療室写真をベースに、優しい出迎えで信頼形成。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/06_S06_moxa_needle.jpg" alt="S06">
+        <img src="images/08_S08_moxa_needle.jpg" alt="S08">
         <div class="body">
-          <div class="hdr"><span class="num">S06</span><span class="sec">18〜23秒</span></div>
+          <div class="hdr"><span class="num">S08</span><span class="role">Solution①</span><span class="sec">22〜27秒</span></div>
           <div class="telop">お一人 約60分／完全予約制</div>
           <div class="nare">東洋医学と、波動医学。お一人にじっくり、1時間。</div>
-          <div class="desc">いただいた灸頭鍼の写真をベースに、屋内のあたたかな光で再描画。</div>
+          <div class="desc">いただいた灸頭鍼写真を踏襲。1時間のゆったり訴求も同時掲載。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/07_S07_cupping.jpg" alt="S07">
+        <img src="images/09_S09_cupping_back.jpg" alt="S09">
         <div class="body">
-          <div class="hdr"><span class="num">S07</span><span class="sec">23〜27秒</span></div>
+          <div class="hdr"><span class="num">S09</span><span class="role">Solution②</span><span class="sec">27〜31秒</span></div>
           <div class="telop">吸い玉（カッピング）</div>
           <div class="nare">吸い玉で、深くにアプローチ。</div>
-          <div class="desc"><strong>主役女性の背中に複数の吸い玉を貼った施術中カット</strong>に変更。先生の手元が添う。<br><small style="color:#999;">（v2修正：吸い玉単体→女性の背中に施術中）</small></div>
+          <div class="desc">主役女性の背中に複数の吸い玉を貼った施術中カット。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/08_S08_metatron.jpg" alt="S08">
+        <img src="images/10_S10_metatron.jpg" alt="S10">
         <div class="body">
-          <div class="hdr"><span class="num">S08</span><span class="sec">27〜30秒</span></div>
+          <div class="hdr"><span class="num">S10</span><span class="role">Solution③</span><span class="sec">31〜34秒</span></div>
           <div class="telop">メタトロン（バイオレゾナンス）</div>
           <div class="nare">気になる方には、メタトロンも。</div>
-          <div class="desc">主役は治療ベッドで穏やかに目を閉じ、先生はPC画面に波形・人体図を確認する<strong>実機寄せの臨床的な構図</strong>に変更。<br><small style="color:#999;">（v2修正：抽象的なセンサー表現→メタトロン機器寄せ）</small></div>
+          <div class="desc">ヘッドセンサー＋PC画面に波形・人体図でメタトロン機器寄せ。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/09_S09_morning_curtain.jpg" alt="S09">
+        <img src="images/11_S11_morning_curtain.jpg" alt="S11">
         <div class="body">
-          <div class="hdr"><span class="num">S09</span><span class="sec">30〜35秒</span></div>
+          <div class="hdr"><span class="num">S11</span><span class="role">Benefit①</span><span class="sec">34〜38秒</span></div>
           <div class="telop">朝が、軽い。</div>
           <div class="nare">朝が、軽い。</div>
-          <div class="desc">翌朝の寝室・カーテンを開ける主役。<strong>S01と同じ寝室</strong>で、寒色の朝→暖色の朝へ。Before→Afterを明確化。<br><small style="color:#999;">（v2修正：S01と寝室を統一）</small></div>
+          <div class="desc">翌朝、S01と同じ寝室でカーテンを開ける。Before→After の対比でBenefit明示。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/10_S10_caregiver_smile.jpg" alt="S10">
+        <img src="images/12_S12_caregiver_smile.jpg" alt="S12">
         <div class="body">
-          <div class="hdr"><span class="num">S10</span><span class="sec">35〜40秒</span></div>
-          <div class="telop">また、自分らしく動ける日々へ</div>
+          <div class="hdr"><span class="num">S12</span><span class="role">Benefit②</span><span class="sec">38〜41秒</span></div>
+          <div class="telop">また、自分らしく</div>
           <div class="nare">仕事も、私も、サクサクと。</div>
-          <div class="desc">介護現場で<strong>杖なし・両手フリー</strong>の軽やかな足取り。背景の高齢者は笑顔で車椅子から手を振る。<br><small style="color:#999;">（v2修正：杖削除＋背景の高齢者を笑顔に）</small></div>
+          <div class="desc">介護現場で杖なし＋両手フリー＋背景の高齢者は笑顔。未来像で締め。</div>
         </div>
       </div>
 
       <div class="scene">
-        <img src="images/11_S11_endcard.jpg" alt="S11 ENDCARD">
+        <img src="images/13_S13_endcard.jpg" alt="S13 ENDCARD">
         <div class="body">
-          <div class="hdr"><span class="num">S11</span><span class="sec">40〜45秒</span></div>
+          <div class="hdr"><span class="num">S13</span><span class="role">CTA</span><span class="sec">41〜45秒</span></div>
           <div class="telop">ENDCARD（屋号・エリア・QR・lit.link）<span class="nara-pill">エリア露出②</span></div>
           <div class="nare" style="background:#fff;border:1px solid var(--border);">無音 or BGMフェード</div>
           <div class="desc">
-            <strong>ヒアリングシートのCTA仕様（QR遷移先 lit.link/RAPITA）に統一</strong>。<br>
-            表示：屋号「鍼灸院 RAPITA」／「奈良・学園前」／QRコード／▶ ご予約・詳細はこちら／lit.link/RAPITA<br>
-            <small style="color:#999;">（v2修正：住所・TEL・営業時間表記を削除しヒアリングシート通りQR中心のシンプル構成に）</small>
+            ヒアリングシートのCTA仕様に統一：<strong>屋号「鍼灸院 RAPITA」／「奈良・学園前」／QRコード／▶ ご予約・詳細はこちら／lit.link/RAPITA</strong>
           </div>
         </div>
       </div>
@@ -362,7 +420,6 @@
       <li><strong>BGM</strong>：落ち着いた癒し系（和×現代の優しいピアノ＋ストリングス）で仮置き</li>
       <li><strong>ナレーション</strong>：女性ナレ（落ち着いたトーン・ゆったり）で仮置き／声質サンプルは別途共有可</li>
       <li><strong>尺</strong>：45秒で仮置き／30秒や60秒もご希望あれば調整可</li>
-      <li><strong>代表（先生）の動画内出演</strong>：受領イラスト準拠の「顔出しOK・アニメ調」で仮置き／「手元のみ／出演なし」もご希望あれば調整可</li>
     </ul>
   </div>
 
